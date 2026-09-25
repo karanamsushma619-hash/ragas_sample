@@ -19,3 +19,42 @@ Completeness — where it can be judged
 Correctness — only where enough trusted evidence exists
 
 So the important difference is that correctness and completeness are strongest offline, because you have ground truth. In production, the judge should only score them when there is enough evidence to do so reliably.
+
+
+
+
+Historical Query + Correct Human Response
+        ↓
+Ground Truth
+        ↓
+Run Agent
+        ↓
+Agent Response + Evidence
+        ↓
+Define Rubrics
+        ↓
+LLM Judge + Human Evaluation
+        ↓
+Compare
+        ↓
+Calibrate
+        ↓
+Holdout Validation
+        ↓
+Freeze Judge
+        ↓
+Evaluate Full Dataset
+        ↓
+Deploy Agent
+        ↓
+Production Response + Evidence
+        ↓
+Calibrated Judge
+        ↓
+Structured Scores
+        ↓
+Dashboard / Monitoring
+        ↓
+Periodic Human Review
+        ↓
+Recalibrate when needed
