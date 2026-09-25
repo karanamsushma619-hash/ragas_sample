@@ -1,0 +1,21 @@
+The rubrics we considered were:
+Correctness — Is the agent's answer factually correct compared with the ground truth or trusted evidence?
+Completeness — Did the agent cover all important parts of the expected answer?
+Relevance — Did the response directly answer the user's question?
+Groundedness — Are the claims in the response supported by the retrieved documents/evidence?
+Citation correctness — Do the citations actually support the claims they are attached to?
+Instruction following — Did the agent follow the required system, business, or task instructions?
+Clarity — Is the response understandable, well-structured, and easy to read?
+For your offline/development evaluation, all seven can be used because you have a correct historical human response as ground truth.
+For production, the practical set is usually:
+
+
+Relevance
+Groundedness
+Citation correctness
+Instruction following
+Clarity
+Completeness — where it can be judged
+Correctness — only where enough trusted evidence exists
+
+So the important difference is that correctness and completeness are strongest offline, because you have ground truth. In production, the judge should only score them when there is enough evidence to do so reliably.
